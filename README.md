@@ -28,9 +28,16 @@ Follow instructions
 Go to folder -> MAMPS -> htdocs
 ```
 
-4. Place our cs-project inside the htdocs
+4. Clone the repository 
+
+```
+git@github.com:Joshuavarghese527/cs-project.git
+```
+
+5. Place our cs-project inside the htdocs
 
 ```
 insert cs-project >>> htdocs
 ```
-5. Open up the MAMPS application and then run the server. Follow the link to open the site and click main.html to view contents
+
+6. Open up the MAMPS application and then run the server. Follow the link to open the site and click main.html to view contents
