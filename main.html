@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Apartment</title>
+      <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"/>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+     <body>
+      <!-- NAV -->
+       <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+          <div class="container">
+            <a class="navbar-brand" href="/">Apartments</a>
+            <div class="collapse navbar-collapse">
+            </div>
+          </div>
+        </nav>
+      <!-- END OF NAV -->
+      <!-- TITLE -->
+      <div class="text-center">
+        <h1> Welcome & Apply For Apartments</h1>
+        <br/>
+      <!-- END OF TITLE -->
+        <!-- TABLE  -->
+          <div class="table-responsive container text-center" >
+            <table class="table table-hover text-center ">
+             <thead  class="thead-dark">
+              <tr>
+                <th scope="col">Apartment</th>
+                <th scope="col"># Beds</th>
+                <th scope="col"># Baths</th>
+                <th scope="col">Floor Plan</th>
+                <th scope="col">Min Price - Max Price</th>
+                <th scope="col">Apply</th>
+              </tr>
+                </thead>
+                  <tbody id="apartment-grid">
+                  </tbody>
+                </table>
+              </div>
+            <img src="../cs-project/images/ajax-loader.gif" id="loading"/>
+        </div>
+    </body>
+    <script>
+        $("#loading").show();
+        setTimeout(function() {
+          $.ajax({
+              url     : '../cs-project/server.php',
+              data    : {},
+              type    : 'GET',
+              success : function(resp){
+                  $("#apartment-grid").html(resp);
+                  $("#loading").hide();
+              },
+              error   : function(resp){
+                 alert("Ajax get request to the following script failed");
+              }  
+           });
+        });
+   </script>
+</html>
