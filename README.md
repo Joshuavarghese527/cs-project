@@ -31,7 +31,7 @@ Go to folder -> MAMPS -> htdocs
 4. Clone the repository 
 
 ```
-git@github.com:Joshuavarghese527/cs-project.git
+git clone git@github.com:Joshuavarghese527/cs-project.git
 ```
 
 5. Place our cs-project inside the htdocs
